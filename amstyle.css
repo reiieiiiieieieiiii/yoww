@@ -1,0 +1,56 @@
+body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Rajdhani', 'Noto Sans JP', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Carbon fiber texture overlay */
+        .carbon-texture {
+            background-image: 
+                radial-gradient(rgba(0, 0, 0, 0.75) 15%, transparent 16%),
+                radial-gradient(rgba(0, 0, 0, 0.75) 15%, transparent 16%);
+            background-size: 6px 6px;
+            background-position: 0 0, 3px 3px;
+        }
+
+        /* Speed line grid animation */
+        .touge-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 42, 95, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+        }
+
+        /* Shift Light animation */
+        @keyframes flashRed {
+            0%, 100% { background-color: #1a2234; box-shadow: none; }
+            50% { background-color: #ff003c; box-shadow: 0 0 25px #ff003c, 0 0 40px #ff003c; }
+        }
+        .shift-light-active {
+            animation: flashRed 0.15s infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #232d42;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ff2a5f;
+        }
+
+        /* 3D Pop Out Effect Container */
+        .card-3d-wrapper {
+            perspective: 1000px;
+        }
+        .card-3d-inner {
+            transition: transform 0.2s ease-out;
+            transform-style: preserve-3d;
+        }
